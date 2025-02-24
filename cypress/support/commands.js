@@ -26,7 +26,19 @@
 
 
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-cypress.commands.add('login', (email, password)=>{
-    cy.get('[name=email]').type(email)
+
+// const {faker} = require('@faker-js/faker');
+
+// const randomEmail = faker.internet.email()
+// const randomPassword = faker.internet.password()
+
+// Cypress.Commands.add('loginform', ()=>{
+//     cy.get('#email').type(randomEmail)
+//     cy.get('#password').type(randomPassword)
+// })
+
+Cypress.Commands.add('loginform', (email, password)=>{
+    cy.get('[name=username]').type(email)
     cy.get('[name=password]').type(password)
+    cy.get('#submit').click()
 })

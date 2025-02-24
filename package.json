@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
-    "cypress:open": "../../node_modules/.bin/cross-env FOO=42 BAR=baz CYPRESS_ping=123 CYPRESS_HOST=laura.dev.local cypress_api_server=http://localhost:8888/api/v1/ ../../node_modules/.bin/cypress open",
-    "cypress:run": "../../node_modules/.bin/cross-env FOO=42 BAR=baz CYPRESS_ping=123 CYPRESS_HOST=laura.dev.local cypress_api_server=http://localhost:8888/api/v1/ ../../node_modules/.bin/cypress run",
-    "test:ci": "npm run cypress:run",
-    "test:ci:record": "npm run cypress:run -- --record"
+    "cy:run-dashboard": "npx cypress run --record --key 1ca03936-0b14-44d3-952d-c0acd8ba5350",
+    "e2e:chrome": "cypress run --browser chrome"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.7.0",
     "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }
